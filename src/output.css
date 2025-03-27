@@ -7,10 +7,16 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-red-500: oklch(0.637 0.237 25.331);
+    --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
     --text-base: 1rem;
     --text-base--line-height: calc(1.5 / 1);
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+    --radius-2xl: 1rem;
     --ease-in: cubic-bezier(0.4, 0, 1, 1);
     --ease-out: cubic-bezier(0, 0, 0.2, 1);
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
@@ -21,6 +27,7 @@
     --spacing-header_container: 1290px;
     --font-manrope: "Manrope", "sans-serif";
     --color-header_bg: #171A2B;
+    --color-main: #FF3B00;
     --color-nav_bg: #05091D;
   }
 }
@@ -440,9 +447,6 @@
   .min-h-screen {
     min-height: 100vh;
   }
-  .w-1 {
-    width: calc(var(--spacing) * 1);
-  }
   .w-1\/2 {
     width: calc(1/2 * 100%);
   }
@@ -838,6 +842,12 @@
   .justify-items-stretch {
     justify-items: stretch;
   }
+  .gap-1 {
+    gap: calc(var(--spacing) * 1);
+  }
+  .gap-2 {
+    gap: calc(var(--spacing) * 2);
+  }
   .space-y-reverse {
     :where(& > :not(:last-child)) {
       --tw-space-y-reverse: 1;
@@ -931,6 +941,12 @@
   }
   .rounded {
     border-radius: 0.25rem;
+  }
+  .rounded-2xl {
+    border-radius: var(--radius-2xl);
+  }
+  .rounded-full {
+    border-radius: calc(infinity * 1px);
   }
   .rounded-s {
     border-start-start-radius: 0.25rem;
@@ -1057,6 +1073,9 @@
   }
   .bg-header_bg {
     background-color: var(--color-header_bg);
+  }
+  .bg-main {
+    background-color: var(--color-main);
   }
   .bg-nav_bg {
     background-color: var(--color-nav_bg);
@@ -1236,14 +1255,65 @@
   .object-top {
     object-position: top;
   }
+  .p-\[1px\] {
+    padding: 1px;
+  }
+  .p-\[10px\] {
+    padding: 10px;
+  }
+  .p-\[15\.3px\] {
+    padding: 15.3px;
+  }
+  .p-\[15px\] {
+    padding: 15px;
+  }
+  .p-\[16px\] {
+    padding: 16px;
+  }
+  .p-\[18px\] {
+    padding: 18px;
+  }
+  .p-\[20px\] {
+    padding: 20px;
+  }
+  .p-\[50px\] {
+    padding: 50px;
+  }
+  .p-\[px\] {
+    padding: px;
+  }
+  .px-6 {
+    padding-inline: calc(var(--spacing) * 6);
+  }
+  .px-\[10px\] {
+    padding-inline: 10px;
+  }
+  .px-\[15px\] {
+    padding-inline: 15px;
+  }
+  .px-\[30px\] {
+    padding-inline: 30px;
+  }
   .py-4 {
     padding-block: calc(var(--spacing) * 4);
+  }
+  .py-\[10\] {
+    padding-block: 10;
+  }
+  .py-\[10px\] {
+    padding-block: 10px;
+  }
+  .py-\[15px\] {
+    padding-block: 15px;
   }
   .pt-\[10px\] {
     padding-top: 10px;
   }
   .pb-4 {
     padding-bottom: calc(var(--spacing) * 4);
+  }
+  .pl-1 {
+    padding-left: calc(var(--spacing) * 1);
   }
   .pl-2 {
     padding-left: calc(var(--spacing) * 2);
@@ -1297,9 +1367,21 @@
     font-size: var(--text-base);
     line-height: var(--tw-leading, var(--text-base--line-height));
   }
+  .text-lg {
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+  }
   .leading-none {
     --tw-leading: 1;
     line-height: 1;
+  }
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+  }
+  .font-medium {
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
   }
   .text-balance {
     text-wrap: balance;
@@ -1657,6 +1739,10 @@
   .transition-normal {
     transition-behavior: normal;
   }
+  .duration-300 {
+    --tw-duration: 300ms;
+    transition-duration: 300ms;
+  }
   .ease-in {
     --tw-ease: var(--ease-in);
     transition-timing-function: var(--ease-in);
@@ -1815,6 +1901,190 @@
   .transform-view {
     transform-box: view-box;
   }
+  .group-hover\:rotate-0 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        rotate: 0deg;
+      }
+    }
+  }
+  .group-hover\:rotate-2 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        rotate: 2deg;
+      }
+    }
+  }
+  .group-hover\:rotate-3 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        rotate: 3deg;
+      }
+    }
+  }
+  .group-hover\:rotate-36 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        rotate: 36deg;
+      }
+    }
+  }
+  .group-hover\:rotate-90 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        rotate: 90deg;
+      }
+    }
+  }
+  .group-hover\:rotate-180 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        rotate: 180deg;
+      }
+    }
+  }
+  .group-hover\:rotate-210 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        rotate: 210deg;
+      }
+    }
+  }
+  .group-hover\:rotate-260 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        rotate: 260deg;
+      }
+    }
+  }
+  .group-hover\:rotate-290 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        rotate: 290deg;
+      }
+    }
+  }
+  .group-hover\:rotate-310 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        rotate: 310deg;
+      }
+    }
+  }
+  .group-hover\:rotate-350 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        rotate: 350deg;
+      }
+    }
+  }
+  .group-hover\:rotate-360 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        rotate: 360deg;
+      }
+    }
+  }
+  .group-hover\:rotate-\[100\%\] {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        rotate: 100%;
+      }
+    }
+  }
+  .group-hover\:rotate-\[100\] {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        rotate: 100;
+      }
+    }
+  }
+  .group-hover\:rotate-\[310\] {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        rotate: 310;
+      }
+    }
+  }
+  .hover\:border {
+    &:hover {
+      @media (hover: hover) {
+        border-style: var(--tw-border-style);
+        border-width: 1px;
+      }
+    }
+  }
+  .hover\:bg-black {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-black);
+      }
+    }
+  }
+  .hover\:text-black {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-black);
+      }
+    }
+  }
+  .hover\:text-main {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-main);
+      }
+    }
+  }
+  .hover\:transition {
+    &:hover {
+      @media (hover: hover) {
+        transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter;
+        transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+        transition-duration: var(--tw-duration, var(--default-transition-duration));
+      }
+    }
+  }
+  .hover\:transition-colors {
+    &:hover {
+      @media (hover: hover) {
+        transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+        transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+        transition-duration: var(--tw-duration, var(--default-transition-duration));
+      }
+    }
+  }
+  .hover\:transition-opacity {
+    &:hover {
+      @media (hover: hover) {
+        transition-property: opacity;
+        transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+        transition-duration: var(--tw-duration, var(--default-transition-duration));
+      }
+    }
+  }
+  .hover\:transition-transform {
+    &:hover {
+      @media (hover: hover) {
+        transition-property: transform, translate, scale, rotate;
+        transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+        transition-duration: var(--tw-duration, var(--default-transition-duration));
+      }
+    }
+  }
+  .hover\:transition-discrete {
+    &:hover {
+      @media (hover: hover) {
+        transition-behavior: allow-discrete;
+      }
+    }
+  }
+  .hover\:transform-border {
+    &:hover {
+      @media (hover: hover) {
+        transform-box: border-box;
+      }
+    }
+  }
 }
 @property --tw-translate-x {
   syntax: "*";
@@ -1914,6 +2184,10 @@
   initial-value: 0;
 }
 @property --tw-leading {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-font-weight {
   syntax: "*";
   inherits: false;
 }
@@ -2073,6 +2347,10 @@
   syntax: "*";
   inherits: false;
 }
+@property --tw-duration {
+  syntax: "*";
+  inherits: false;
+}
 @property --tw-ease {
   syntax: "*";
   inherits: false;
@@ -2090,10 +2368,6 @@
   inherits: false;
 }
 @property --tw-contain-style {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-duration {
   syntax: "*";
   inherits: false;
 }
