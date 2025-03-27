@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@theme {
+    /* Container */
+    --spacing-header_container: 1290px; 
+    /* Container */
+
+    /* Google Fonts */
+    --font-manrope: "Manrope", "sans-serif";
+    /* Google Fonts */
+
+    /* Colors  */
+    --color-header_bg: #171A2B;
+    /* Colors  */
+}
