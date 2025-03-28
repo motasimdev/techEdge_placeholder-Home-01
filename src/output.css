@@ -16,7 +16,6 @@
     --text-lg--line-height: calc(1.75 / 1.125);
     --font-weight-medium: 500;
     --font-weight-bold: 700;
-    --radius-2xl: 1rem;
     --ease-in: cubic-bezier(0.4, 0, 1, 1);
     --ease-out: cubic-bezier(0, 0, 0.2, 1);
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
@@ -447,6 +446,9 @@
   .min-h-screen {
     min-height: 100vh;
   }
+  .w-1 {
+    width: calc(var(--spacing) * 1);
+  }
   .w-1\/2 {
     width: calc(1/2 * 100%);
   }
@@ -842,12 +844,6 @@
   .justify-items-stretch {
     justify-items: stretch;
   }
-  .gap-1 {
-    gap: calc(var(--spacing) * 1);
-  }
-  .gap-2 {
-    gap: calc(var(--spacing) * 2);
-  }
   .space-y-reverse {
     :where(& > :not(:last-child)) {
       --tw-space-y-reverse: 1;
@@ -941,9 +937,6 @@
   }
   .rounded {
     border-radius: 0.25rem;
-  }
-  .rounded-2xl {
-    border-radius: var(--radius-2xl);
   }
   .rounded-full {
     border-radius: calc(infinity * 1px);
@@ -1101,6 +1094,21 @@
     --tw-gradient-position: in oklab;
     background-image: radial-gradient(var(--tw-gradient-stops));
   }
+  .bg-\[url\(\.\.\/asset\/banner_bg\.png\)\] {
+    background-image: url(../asset/banner_bg.png);
+  }
+  .bg-\[url\(\.\.\/src\/asset\/banner_bg\.png\)\] {
+    background-image: url(../src/asset/banner_bg.png);
+  }
+  .bg-\[url\(\.\.\/srcasset\/banner_bg\.png\)\] {
+    background-image: url(../srcasset/banner_bg.png);
+  }
+  .bg-\[url\(\/asset\/banner_bg\.png\)\] {
+    background-image: url(/asset/banner_bg.png);
+  }
+  .bg-\[url\(\/images\/banner_bg\.png\)\] {
+    background-image: url(/images/banner_bg.png);
+  }
   .bg-none {
     background-image: none;
   }
@@ -1255,56 +1263,26 @@
   .object-top {
     object-position: top;
   }
-  .p-\[1px\] {
-    padding: 1px;
-  }
-  .p-\[10px\] {
-    padding: 10px;
-  }
-  .p-\[15\.3px\] {
-    padding: 15.3px;
-  }
-  .p-\[15px\] {
-    padding: 15px;
-  }
   .p-\[16px\] {
     padding: 16px;
-  }
-  .p-\[18px\] {
-    padding: 18px;
-  }
-  .p-\[20px\] {
-    padding: 20px;
-  }
-  .p-\[50px\] {
-    padding: 50px;
-  }
-  .p-\[px\] {
-    padding: px;
   }
   .px-6 {
     padding-inline: calc(var(--spacing) * 6);
   }
-  .px-\[10px\] {
-    padding-inline: 10px;
-  }
-  .px-\[15px\] {
-    padding-inline: 15px;
-  }
   .px-\[30px\] {
     padding-inline: 30px;
+  }
+  .py-1 {
+    padding-block: calc(var(--spacing) * 1);
   }
   .py-4 {
     padding-block: calc(var(--spacing) * 4);
   }
-  .py-\[10\] {
-    padding-block: 10;
-  }
-  .py-\[10px\] {
-    padding-block: 10px;
-  }
   .py-\[15px\] {
     padding-block: 15px;
+  }
+  .py-\[160px\] {
+    padding-block: 160px;
   }
   .pt-\[10px\] {
     padding-top: 10px;
@@ -1901,116 +1879,10 @@
   .transform-view {
     transform-box: view-box;
   }
-  .group-hover\:rotate-0 {
-    &:is(:where(.group):hover *) {
-      @media (hover: hover) {
-        rotate: 0deg;
-      }
-    }
-  }
-  .group-hover\:rotate-2 {
-    &:is(:where(.group):hover *) {
-      @media (hover: hover) {
-        rotate: 2deg;
-      }
-    }
-  }
-  .group-hover\:rotate-3 {
-    &:is(:where(.group):hover *) {
-      @media (hover: hover) {
-        rotate: 3deg;
-      }
-    }
-  }
-  .group-hover\:rotate-36 {
-    &:is(:where(.group):hover *) {
-      @media (hover: hover) {
-        rotate: 36deg;
-      }
-    }
-  }
-  .group-hover\:rotate-90 {
-    &:is(:where(.group):hover *) {
-      @media (hover: hover) {
-        rotate: 90deg;
-      }
-    }
-  }
-  .group-hover\:rotate-180 {
-    &:is(:where(.group):hover *) {
-      @media (hover: hover) {
-        rotate: 180deg;
-      }
-    }
-  }
-  .group-hover\:rotate-210 {
-    &:is(:where(.group):hover *) {
-      @media (hover: hover) {
-        rotate: 210deg;
-      }
-    }
-  }
-  .group-hover\:rotate-260 {
-    &:is(:where(.group):hover *) {
-      @media (hover: hover) {
-        rotate: 260deg;
-      }
-    }
-  }
-  .group-hover\:rotate-290 {
-    &:is(:where(.group):hover *) {
-      @media (hover: hover) {
-        rotate: 290deg;
-      }
-    }
-  }
-  .group-hover\:rotate-310 {
-    &:is(:where(.group):hover *) {
-      @media (hover: hover) {
-        rotate: 310deg;
-      }
-    }
-  }
-  .group-hover\:rotate-350 {
-    &:is(:where(.group):hover *) {
-      @media (hover: hover) {
-        rotate: 350deg;
-      }
-    }
-  }
   .group-hover\:rotate-360 {
     &:is(:where(.group):hover *) {
       @media (hover: hover) {
         rotate: 360deg;
-      }
-    }
-  }
-  .group-hover\:rotate-\[100\%\] {
-    &:is(:where(.group):hover *) {
-      @media (hover: hover) {
-        rotate: 100%;
-      }
-    }
-  }
-  .group-hover\:rotate-\[100\] {
-    &:is(:where(.group):hover *) {
-      @media (hover: hover) {
-        rotate: 100;
-      }
-    }
-  }
-  .group-hover\:rotate-\[310\] {
-    &:is(:where(.group):hover *) {
-      @media (hover: hover) {
-        rotate: 310;
-      }
-    }
-  }
-  .hover\:border {
-    &:hover {
-      @media (hover: hover) {
-        border-style: var(--tw-border-style);
-        border-width: 1px;
       }
     }
   }
@@ -2021,67 +1893,10 @@
       }
     }
   }
-  .hover\:text-black {
-    &:hover {
-      @media (hover: hover) {
-        color: var(--color-black);
-      }
-    }
-  }
   .hover\:text-main {
     &:hover {
       @media (hover: hover) {
         color: var(--color-main);
-      }
-    }
-  }
-  .hover\:transition {
-    &:hover {
-      @media (hover: hover) {
-        transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter;
-        transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-        transition-duration: var(--tw-duration, var(--default-transition-duration));
-      }
-    }
-  }
-  .hover\:transition-colors {
-    &:hover {
-      @media (hover: hover) {
-        transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
-        transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-        transition-duration: var(--tw-duration, var(--default-transition-duration));
-      }
-    }
-  }
-  .hover\:transition-opacity {
-    &:hover {
-      @media (hover: hover) {
-        transition-property: opacity;
-        transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-        transition-duration: var(--tw-duration, var(--default-transition-duration));
-      }
-    }
-  }
-  .hover\:transition-transform {
-    &:hover {
-      @media (hover: hover) {
-        transition-property: transform, translate, scale, rotate;
-        transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-        transition-duration: var(--tw-duration, var(--default-transition-duration));
-      }
-    }
-  }
-  .hover\:transition-discrete {
-    &:hover {
-      @media (hover: hover) {
-        transition-behavior: allow-discrete;
-      }
-    }
-  }
-  .hover\:transform-border {
-    &:hover {
-      @media (hover: hover) {
-        transform-box: border-box;
       }
     }
   }
