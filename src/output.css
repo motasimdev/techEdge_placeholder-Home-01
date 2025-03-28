@@ -14,7 +14,9 @@
     --text-base--line-height: calc(1.5 / 1);
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
+    --font-weight-extralight: 200;
     --font-weight-medium: 500;
+    --font-weight-semibold: 600;
     --font-weight-bold: 700;
     --ease-in: cubic-bezier(0.4, 0, 1, 1);
     --ease-out: cubic-bezier(0, 0, 0.2, 1);
@@ -25,6 +27,7 @@
     --default-mono-font-family: var(--font-mono);
     --spacing-header_container: 1290px;
     --font-manrope: "Manrope", "sans-serif";
+    --font-poppins: "Poppins", "sans-serif";
     --color-header_bg: #171A2B;
     --color-main: #FF3B00;
     --color-nav_bg: #05091D;
@@ -451,6 +454,24 @@
   }
   .w-1\/2 {
     width: calc(1/2 * 100%);
+  }
+  .w-\[5px\] {
+    width: 5px;
+  }
+  .w-\[58px\] {
+    width: 58px;
+  }
+  .w-\[520\] {
+    width: 520;
+  }
+  .w-\[520px\] {
+    width: 520px;
+  }
+  .w-\[564px\] {
+    width: 564px;
+  }
+  .w-\[580px\] {
+    width: 580px;
   }
   .w-screen {
     width: 100vw;
@@ -1049,6 +1070,9 @@
     --tw-border-style: solid;
     border-style: solid;
   }
+  .border-main {
+    border-color: var(--color-main);
+  }
   .bg-\(--my_variable\) {
     background-color: var(--my_variable);
   }
@@ -1094,20 +1118,8 @@
     --tw-gradient-position: in oklab;
     background-image: radial-gradient(var(--tw-gradient-stops));
   }
-  .bg-\[url\(\.\.\/asset\/banner_bg\.png\)\] {
-    background-image: url(../asset/banner_bg.png);
-  }
   .bg-\[url\(\.\.\/src\/asset\/banner_bg\.png\)\] {
     background-image: url(../src/asset/banner_bg.png);
-  }
-  .bg-\[url\(\.\.\/srcasset\/banner_bg\.png\)\] {
-    background-image: url(../srcasset/banner_bg.png);
-  }
-  .bg-\[url\(\/asset\/banner_bg\.png\)\] {
-    background-image: url(/asset/banner_bg.png);
-  }
-  .bg-\[url\(\/images\/banner_bg\.png\)\] {
-    background-image: url(/images/banner_bg.png);
   }
   .bg-none {
     background-image: none;
@@ -1272,11 +1284,11 @@
   .px-\[30px\] {
     padding-inline: 30px;
   }
-  .py-1 {
-    padding-block: calc(var(--spacing) * 1);
-  }
   .py-4 {
     padding-block: calc(var(--spacing) * 4);
+  }
+  .py-10 {
+    padding-block: calc(var(--spacing) * 10);
   }
   .py-\[15px\] {
     padding-block: 15px;
@@ -1284,11 +1296,17 @@
   .py-\[160px\] {
     padding-block: 160px;
   }
+  .py-\[\=\] {
+    padding-block: =;
+  }
   .pt-\[10px\] {
     padding-top: 10px;
   }
   .pb-4 {
     padding-bottom: calc(var(--spacing) * 4);
+  }
+  .pb-6 {
+    padding-bottom: calc(var(--spacing) * 6);
   }
   .pl-1 {
     padding-left: calc(var(--spacing) * 1);
@@ -1341,6 +1359,9 @@
   .font-manrope {
     font-family: var(--font-manrope);
   }
+  .font-poppins {
+    font-family: var(--font-poppins);
+  }
   .text-base {
     font-size: var(--text-base);
     line-height: var(--tw-leading, var(--text-base--line-height));
@@ -1348,6 +1369,36 @@
   .text-lg {
     font-size: var(--text-lg);
     line-height: var(--tw-leading, var(--text-lg--line-height));
+  }
+  .text-\[6px\] {
+    font-size: 6px;
+  }
+  .text-\[66px\] {
+    font-size: 66px;
+  }
+  .leading-4 {
+    --tw-leading: calc(var(--spacing) * 4);
+    line-height: calc(var(--spacing) * 4);
+  }
+  .leading-7 {
+    --tw-leading: calc(var(--spacing) * 7);
+    line-height: calc(var(--spacing) * 7);
+  }
+  .leading-\[30px\] {
+    --tw-leading: 30px;
+    line-height: 30px;
+  }
+  .leading-\[80\] {
+    --tw-leading: 80;
+    line-height: 80;
+  }
+  .leading-\[80px\] {
+    --tw-leading: 80px;
+    line-height: 80px;
+  }
+  .leading-\[p\] {
+    --tw-leading: p;
+    line-height: p;
   }
   .leading-none {
     --tw-leading: 1;
@@ -1357,9 +1408,17 @@
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
+  .font-extralight {
+    --tw-font-weight: var(--font-weight-extralight);
+    font-weight: var(--font-weight-extralight);
+  }
   .font-medium {
     --tw-font-weight: var(--font-weight-medium);
     font-weight: var(--font-weight-medium);
+  }
+  .font-semibold {
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
   }
   .text-balance {
     text-wrap: balance;
@@ -1433,6 +1492,9 @@
   }
   .\[color\:red\]\/50\! {
     color: color-mix(in oklab, red 50%, transparent) !important;
+  }
+  .text-\[px\] {
+    color: px;
   }
   .text-white {
     color: var(--color-white);
@@ -1893,10 +1955,31 @@
       }
     }
   }
+  .hover\:bg-main {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-main);
+      }
+    }
+  }
+  .hover\:text-black {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-black);
+      }
+    }
+  }
   .hover\:text-main {
     &:hover {
       @media (hover: hover) {
         color: var(--color-main);
+      }
+    }
+  }
+  .hover\:text-white {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-white);
       }
     }
   }
