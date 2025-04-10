@@ -1084,6 +1084,9 @@
   .bg-\(color\:--my-color\) {
     background-color: var(--my-color);
   }
+  .bg-\[\#5a5c68\] {
+    background-color: #5a5c68;
+  }
   .bg-\[\#0088cc\] {
     background-color: #0088cc;
   }
@@ -1093,11 +1096,17 @@
   .bg-\[\#\] {
     background-color: #;
   }
+  .bg-\[5a5c68\] {
+    background-color: 5a5c68;
+  }
   .bg-\[color\:var\(--my-color\)\] {
     background-color: var(--my-color);
   }
   .bg-\[var\(--my_variable\)\] {
     background-color: var(--my_variable);
+  }
+  .bg-\[white\] {
+    background-color: white;
   }
   .bg-header_bg {
     background-color: var(--color-header_bg);
@@ -1405,6 +1414,9 @@
   .text-\[22px\] {
     font-size: 22px;
   }
+  .text-\[32px\] {
+    font-size: 32px;
+  }
   .text-\[60px\] {
     font-size: 60px;
   }
@@ -1514,6 +1526,9 @@
   }
   .text-\[\#7A7A7A\] {
     color: #7A7A7A;
+  }
+  .text-\[px\] {
+    color: px;
   }
   .text-nav_bg {
     color: var(--color-nav_bg);
@@ -1978,10 +1993,24 @@
       }
     }
   }
+  .group-hover\:text-white {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        color: var(--color-white);
+      }
+    }
+  }
   .hover\:bg-\[\#5a5c68\] {
     &:hover {
       @media (hover: hover) {
         background-color: #5a5c68;
+      }
+    }
+  }
+  .hover\:bg-\[\#656a87\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: #656a87;
       }
     }
   }
@@ -1999,6 +2028,13 @@
       }
     }
   }
+  .hover\:bg-\[\#\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: #;
+      }
+    }
+  }
   .hover\:bg-black {
     &:hover {
       @media (hover: hover) {
@@ -2013,6 +2049,13 @@
       }
     }
   }
+  .hover\:bg-white {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-white);
+      }
+    }
+  }
   .hover\:text-black {
     &:hover {
       @media (hover: hover) {
@@ -2024,6 +2067,29 @@
     &:hover {
       @media (hover: hover) {
         color: var(--color-main);
+      }
+    }
+  }
+  .hover\:text-white {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-white);
+      }
+    }
+  }
+  .hover\:drop-shadow-lg {
+    &:hover {
+      @media (hover: hover) {
+        --tw-drop-shadow: drop-shadow(var(--drop-shadow-lg));
+        filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+      }
+    }
+  }
+  .hover\:duration-300 {
+    &:hover {
+      @media (hover: hover) {
+        --tw-duration: 300ms;
+        transition-duration: 300ms;
       }
     }
   }
